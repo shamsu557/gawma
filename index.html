@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAWMA - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <!-- FontAwesome for Social Media Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Top Header Bar */
+        .top-bar {
+            background: #77b81e;
+            color: white;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background: white;
+        }
+        .navbar-brand {
+            font-size: 22px;
+            font-weight: bold;
+            color: #77b81e;
+        }
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #77b81e;
+        }
+        
+        /* Hide Phone Number on Small Screens */
+        .nav-phone {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .nav-phone {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 250px; /* Reduced height */
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #77b81e;
+        }
+        .footer h5 {
+            color: #77b81e;
+            margin-bottom: 15px;
+        }
+        .footer .social-icons a {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 15px 0;
+            background: #000;
+        }
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Initially show the first image */
+.hero img:first-child {
+    opacity: 1;
+}
+
+/* Caption Styling */
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+
+          
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar text-center">
+        <span> Mon-Fri: 07:30-19:00 | Toll Free: 080-000-52962 | info@gawma.gov.ng </span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">GAWMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    
+                    <!-- About Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                            <li><a class="dropdown-item" href="#">Principal Officers</a></li>
+                            <li><a class="dropdown-item" href="#">Departments & Units</a></li>
+                            <li><a class="dropdown-item" href="#">Achievements & Awards</a></li>
+                            <li><a class="dropdown-item" href="#">MD/CEO Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Past MD/CEOs</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- District Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="districtDropdown" role="button" data-bs-toggle="dropdown">
+                            District
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Kano North</a></li>
+                            <li><a class="dropdown-item" href="#">Kano South</a></li>
+                            <li><a class="dropdown-item" href="#">Kano Central</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Academy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Payment</a></li>
+
+                    <!-- Resources Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Staff Appraisal Reports</a></li>
+                            <li><a class="dropdown-item" href="#">Downloadable Resources</a></li>
+                            <li><a class="dropdown-item" href="#">App Platform</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- News & Events Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown">
+                            News & Events
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Kano State</a></li>
+                            <li><a class="dropdown-item" href="#">GAWMA News & Events</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Recycling Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="recyclingDropdown" role="button" data-bs-toggle="dropdown">
+                            Recycling
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Recyclers</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- PSP Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pspDropdown" role="button" data-bs-toggle="dropdown">
+                            PSP
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PSP Transformation</a></li>
+                            <li><a class="dropdown-item" href="#">Domestic & Commercial PSP Directory</a></li>
+                            <li><a class="dropdown-item" href="#">Healthcare & Medical Waste PSP Directory</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    
+                    <!-- Search Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+ <!-- Hero Section -->
+<div class="hero">
+    <img id="heroImage" src="empower.jfif" alt="Hero Image" class="fade-up">
+    <div class="carousel-caption">
+        <div class="caption-bg">
+            <h5 id="heroTitle">Committed to a Cleaner Kano</h5>
+            <p id="heroText">Ensuring a sustainable and healthy environment for all residents.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+<footer class="footer bg-dark text-light pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- GAWMA Useful Links -->
+            <div class="col-md-3">
+                <h5>GAWMA</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">➤ Gombe State Government</a></li>
+                    <li><a href="#">➤ Gombe State Environmental Protection Agency</a></li>
+                    <li><a href="#">➤ Gombe State Waste Water Management Office</a></li>
+                    <li><a href="#">➤ Ministry Of The Environment</a></li>
+                    <li><a href="#">➤ Gombe State Signage and Advertisement Agency</a></li>
+                    <li><a href="#">➤ Gombe State Parks And Garden Agency</a></li>
+                </ul>
+            </div>
+            <!-- Opening Hours -->
+            <div class="col-md-3">
+                <h5>Opening Hours</h5>
+                <p>Mon – Fri: 07:30 – 19:00</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">➤ Home</a></li>
+                    <li><a href="#">➤ About Us</a></li>
+                    <li><a href="#">➤ Districts</a></li>
+                    <li><a href="#">➤ GAWMA Academy</a></li>
+                    <li><a href="#">➤ Make Payment</a></li>
+                    <li><a href="#">➤ Resources</a></li>
+                    <li><a href="#">➤ News and Events</a></li>
+                    <li><a href="#">➤ FAQ</a></li>
+                    <li><a href="#">➤ Contact Us</a></li>
+                    <li><a href="#">➤ Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-md-3">
+                <h5>Contact Info</h5>
+                <p><strong>HEADQUARTER:</strong></p>
+                <p>No. 10 GAWMA Street, Gombe, Nigeria.</p>
+                <p><i class="fas fa-phone"></i> 080-000-GAWMA (080-000-42962)</p>
+                <p><i class="fas fa-phone"></i> (+234) 708 060 1020</p>
+                <p><i class="fas fa-envelope"></i> info@gawma.gov.ng</p>
+                <!-- Social Media -->
+                <div class="mt-3">
+                    <a href="https://www.facebook.com" target="_blank" class="text-light me-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="text-light me-2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-light me-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="text-light me-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-light me-2"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="row">
+            <div class="col text-center">
+                <p>&copy; <span id="currentYear"></span> Gombe State Waste Management Authority - Powered by SAFS Technologies.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript to Update Year Dynamically -->
+<script>
+    const images = [
+    { src: "empower.jfif", title: "Committed to a Cleaner Kano", text: "Ensuring a sustainable and healthy environment for all residents." },
+    { src: "Empower.jpg", title: "Innovative Waste Solutions", text: "Implementing cutting-edge technologies for efficient waste management." },
+    { src: "future1.jfif", title: "Community Engagement", text: "Collaborating with communities to promote recycling and waste reduction." },
+    { src: "orphanage.jfif", title: "Environmental Education", text: "Educating the public on the importance of proper waste disposal." }
+];
+
+let currentIndex = 0;
+const heroImage = document.getElementById("heroImage");
+const heroTitle = document.getElementById("heroTitle");
+const heroText = document.getElementById("heroText");
+
+function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+
+    // Fade out
+    heroImage.style.opacity = 0;
+
+    setTimeout(() => {
+        heroImage.src = images[currentIndex].src;
+        heroTitle.textContent = images[currentIndex].title;
+        heroText.textContent = images[currentIndex].text;
+        
+        // Fade in
+        heroImage.style.opacity = 1;
+    }, 1500); // Wait for fade-out to complete before changing the image
+}
+
+// Change image every 5 seconds
+setInterval(changeImage, 12000);
+
+</script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
