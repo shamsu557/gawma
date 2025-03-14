@@ -103,10 +103,12 @@
 }
 
 /* Footer */
+/* Footer */
 .footer {
     background: #111;
     color: white;
     padding: 40px 0;
+    text-align: left; /* Default alignment */
 }
 .footer a {
     color: white;
@@ -119,15 +121,30 @@
     color: #77b81e;
     margin-bottom: 15px;
 }
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
 .footer .social-icons a {
-    margin-right: 10px;
     font-size: 20px;
+    margin-right: 10px;
 }
 .footer-bottom {
     text-align: center;
     padding: 15px 0;
     background: #000;
 }
+
+/* Center footer text and items on small screens */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
 
 /* GAWMA View Section */
 .gawma-view {
@@ -243,19 +260,24 @@
         font-size: 2rem;
     }
 }
-
-
-
-          
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar text-center">
-        <span> Mon-Fri: 07:30-19:00 | Toll Free: 080-000-52962 | info@gawma.gov.ng </span>
-    </div>
-
+   <!-- Top Bar -->
+<div class="top-bar text-center">
+    <span>
+        <i class="fas fa-clock"></i> Mon-Fri: 07:30-19:00 |
+        <i class="fas fa-phone-alt"></i> 080-000-52962 |
+        <i class="fas fa-envelope"></i> info@gawma.gov.ng
+    </span>
+    <span class="ms-3">
+        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </span>
+</div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg shadow-sm">
         <div class="container">
@@ -447,29 +469,58 @@
     </div>
 
     <!-- News & Feeds Section -->
-    <div class="text-center mb-4 mt-5">
-        <div class="d-flex align-items-center justify-content-center">
-            <hr class="flex-grow-1 me-3" style="border: 1px solid #000; width: 20%;">
-            <i class="fas fa-newspaper fa-3x text-info"></i>
-            <hr class="flex-grow-1 ms-3" style="border: 1px solid #000; width: 20%;">
-        </div>
-        <h2 class="fw-bold mt-2">News & Feeds</h2>
+   <!-- News & Feeds Section -->
+<div class="text-center mb-4 mt-5">
+    <div class="d-flex align-items-center justify-content-center">
+        <hr class="flex-grow-1 me-3" style="border: 1px solid #000; width: 20%;">
+        <i class="fas fa-newspaper fa-3x text-info"></i>
+        <hr class="flex-grow-1 ms-3" style="border: 1px solid #000; width: 20%;">
     </div>
-    <div class="row g-4">
-        <div class="col-lg-6">
-            <div class="card p-3">
-                <h4>GAWMA Launches Clean Kano Campaign</h4>
-                <p><strong>Date:</strong> March 10, 2025</p>
-                <p>To enhance community sanitation, GAWMA has launched a cleanup initiative encouraging residents to take responsibility for their environment. This initiative includes street cleaning, waste segregation training, and household waste management guidance.</p>
-            </div>
+    <h2 class="fw-bold mt-2">News & Feeds</h2>
+</div>
+<div class="row g-4">
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>GAWMA Launches Clean Kano Campaign</h4>
+            <p><strong>Date:</strong> March 10, 2025</p>
+            <p>To enhance community sanitation, GAWMA has launched a cleanup initiative encouraging residents to take responsibility for their environment. This initiative includes street cleaning, waste segregation training, and household waste management guidance.</p>
         </div>
-        <div class="col-lg-6">
-            <div class="card p-3">
-                <h4>GAWMA Introduces Smart Waste Bins</h4>
-                <p><strong>Date:</strong> February 25, 2025</p>
-                <p>In a bid to improve waste collection efficiency, GAWMA is rolling out smart waste bins across strategic locations. These bins are designed with sensors to monitor waste levels and alert collection teams for timely disposal.</p>
-            </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>GAWMA Introduces Smart Waste Bins</h4>
+            <p><strong>Date:</strong> February 25, 2025</p>
+            <p>In a bid to improve waste collection efficiency, GAWMA is rolling out smart waste bins across strategic locations. These bins are designed with sensors to monitor waste levels and alert collection teams for timely disposal.</p>
         </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>Environmental Awareness Program in Schools</h4>
+            <p><strong>Date:</strong> February 15, 2025</p>
+            <p>GAWMA, in partnership with local schools, has launched an educational program to teach students about waste management and environmental conservation. The initiative includes workshops, competitions, and field activities.</p>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>New Waste Collection Vehicles Deployed</h4>
+            <p><strong>Date:</strong> January 30, 2025</p>
+            <p>To boost waste collection services, GAWMA has added 20 new waste collection trucks to its fleet, ensuring faster and more efficient waste disposal across Kano.</p>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>GAWMA Partners with Recycling Firms</h4>
+            <p><strong>Date:</strong> January 15, 2025</p>
+            <p>In an effort to promote recycling and reduce landfill waste, GAWMA has signed agreements with multiple recycling firms to process plastics, paper, and organic waste efficiently.</p>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card p-3">
+            <h4>Monthly Community Clean-Up Drive Launched</h4>
+            <p><strong>Date:</strong> January 5, 2025</p>
+            <p>GAWMA has introduced a monthly clean-up drive, engaging volunteers and local businesses in keeping Kano's streets clean. The program is aimed at fostering community participation in waste management.</p>
+        </div>
+    </div>
     </div>
 </section>
     <!-- Footer -->
@@ -568,7 +619,20 @@ function changeImage() {
 
 // Change image every 5 seconds
 setInterval(changeImage, 12000);
+function toggleTopBar() {
+        let topBar = document.querySelector('.top-bar');
+        if (window.innerWidth <= 768) {
+            topBar.style.display = 'none';
+        } else {
+            topBar.style.display = 'block';
+        }
+    }
 
+    // Run on page load
+    toggleTopBar();
+
+    // Run on window resize
+    window.addEventListener('resize', toggleTopBar);
 </script>
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
