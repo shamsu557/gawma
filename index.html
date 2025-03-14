@@ -20,91 +20,56 @@
 </head>
     
     <style>
-        /* Top Header Bar */
-        .top-bar {
-            background: #77b81e;
-            color: white;
-            padding: 5px 0;
-            font-size: 14px;
-        }
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        
-        /* Navigation Bar */
-        .navbar {
-            background: white;
-        }
-        .navbar-brand {
-            font-size: 22px;
-            font-weight: bold;
-            color: #77b81e;
-        }
-        .navbar-nav .nav-link {
-            font-size: 16px;
-            font-weight: bold;
-            color: black;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #77b81e;
-        }
-        
-        /* Hide Phone Number on Small Screens */
-        .nav-phone {
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .nav-phone {
-                display: none;
-            }
-        }
+       /* Top Header Bar */
+.top-bar {
+    background: #77b81e;
+    color: white;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: center;
+}
 
-        /* Hero Section */
-        .hero {
-            height: 250px; /* Reduced height */
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
+/* Hide Top Bar on Small Screens */
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+}
 
-        /* Footer */
-        .footer {
-            background: #111;
-            color: white;
-            padding: 40px 0;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #77b81e;
-        }
-        .footer h5 {
-            color: #77b81e;
-            margin-bottom: 15px;
-        }
-        .footer .social-icons a {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding: 15px 0;
-            background: #000;
-        }
+/* Navigation Bar */
+.navbar {
+    background: white;
+}
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #77b81e;
+}
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.navbar-nav .nav-link:hover {
+    color: #77b81e;
+}
+
+/* Hide Phone Number on Small Screens */
+.nav-phone {
+    display: block;
+}
+@media (max-width: 768px) {
+    .nav-phone {
+        display: none;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     height: 450px;
     overflow: hidden;
 }
-
 .hero img {
     width: 100%;
     height: 100%;
@@ -115,7 +80,6 @@
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
-
 /* Initially show the first image */
 .hero img:first-child {
     opacity: 1;
@@ -137,6 +101,149 @@
     color: white;
     padding: 20px;
 }
+
+/* Footer */
+.footer {
+    background: #111;
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #77b81e;
+}
+.footer h5 {
+    color: #77b81e;
+    margin-bottom: 15px;
+}
+.footer .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background: #000;
+}
+
+/* GAWMA View Section */
+.gawma-view {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.gawma-view .icon-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gawma-view .icon-line hr {
+    flex-grow: 1;
+    border: 1px solid #000;
+    width: 20%;
+}
+.gawma-view .icon-line i {
+    font-size: 3rem;
+    color: #77b81e;
+}
+.gawma-view h2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* What We Do Section */
+.what-we-do {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.what-we-do .icon-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.what-we-do .icon-line hr {
+    flex-grow: 1;
+    border: 1px solid #000;
+    width: 20%;
+}
+.what-we-do .icon-line i {
+    font-size: 3rem;
+    color: #77b81e;
+}
+.what-we-do h2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* News & Feeds Section */
+.news-feeds {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.news-feeds .icon-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-feeds .icon-line hr {
+    flex-grow: 1;
+    border: 1px solid #000;
+    width: 20%;
+}
+.news-feeds .icon-line i {
+    font-size: 3rem;
+    color: #77b81e;
+}
+.news-feeds h2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        height: 250px;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+}
+
+/* Adjustments for Extra Small Screens */
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    /* Reduce icon size for small screens */
+    .gawma-view .icon-line i,
+    .what-we-do .icon-line i,
+    .news-feeds .icon-line i {
+        font-size: 2rem;
+    }
+}
+
 
 
           
